@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="http://cdn.peerjs.com/0.3/peer.js"></script>
+    <script>
+     var peer = new Peer('SenderID', {key: '2brn5kou1y2b7qfr'});
+     var conn = peer.connect('ReceiverID');
+     conn.on('open', function(){
+       conn.send('hi! masutaka!');
+     });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="http://cdn.peerjs.com/0.3/peer.js"></script>
+    <script>
+     var peer = new Peer('ReceiverID', {key: '2brn5kou1y2b7qfr'});
+     peer.on('connection', function(conn) {
+       conn.on('data', function(data){
+         console.log(111);
+         document.getElementById("receive_message").innerHTML = data;
+       });
+     });
+    </script>
+  </head>
+  <body>
+    <div id="receive_message"></div>
+  </body>
+</html>
